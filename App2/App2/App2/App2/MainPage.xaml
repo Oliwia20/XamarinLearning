@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.MainPage">
+
+    <StackLayout>
+        <Frame>
+            <Label Text="This is Stack Layout" FontSize="Large" HorizontalOptions="CenterAndExpand" />
+        </Frame>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="If you want to see a preview of another layouts, click one of the buttons below: " FontSize="Medium" HorizontalTextAlignment="Center"/>
+            <Button x:Name="btnGrid" Text="Grid Layout" Clicked="Button_Clicked"/>
+            <Button x:Name="btnAbsolute" Text="Absolute Layout" Clicked="Button_Clicked"/>
+            <Button x:Name="btnRelative" Text="Relative Layout" Clicked="Button_Clicked"/>
+            <Button x:Name="btnFlex" Text="Flex Layout" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
