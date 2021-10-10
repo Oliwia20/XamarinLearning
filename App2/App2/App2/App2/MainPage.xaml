@@ -4,8 +4,8 @@
              x:Class="App2.MainPage">
 
     <StackLayout>
-        <Frame>
-            <Label Text="This is Stack Layout" FontSize="Large" HorizontalOptions="CenterAndExpand" />
+        <Frame  BackgroundColor="Black">
+            <Label Text="This is Stack Layout" TextColor="White" FontSize="Large" HorizontalOptions="CenterAndExpand" />
         </Frame>
         <StackLayout VerticalOptions="CenterAndExpand">
             <Label Text="If you want to see a preview of another layouts, click one of the buttons below: " FontSize="Medium" HorizontalTextAlignment="Center"/>

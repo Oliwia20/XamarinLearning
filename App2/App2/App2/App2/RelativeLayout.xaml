@@ -2,11 +2,63 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App2.RelativeLayout">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <RelativeLayout>
+        <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Probosciger_aterrimus_-Melaka_Zoo-8a-2c.jpg/220px-Probosciger_aterrimus_-Melaka_Zoo-8a-2c.jpg"
+               RelativeLayout.XConstraint="40"
+               RelativeLayout.YConstraint="20"
+               RelativeLayout.WidthConstraint="100"
+               RelativeLayout.HeightConstraint="200"/>
+
+        <Label Text="Sample of RelativeLayout"
+               FontSize="Large"
+               BackgroundColor="LightGray"
+               RelativeLayout.XConstraint="200"
+               RelativeLayout.YConstraint="90"
+               RelativeLayout.WidthConstraint="150"
+               RelativeLayout.HeightConstraint="70"/>
+
+        <BoxView Color="LightPink"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=20}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=210}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant, Constant=370}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=15}"/>
+
+        <Label Text="Lorem ıpsum lor tars Lorem ıpsum lor tars"
+               FontSize="Subtitle"
+               TextColor="CadetBlue"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Constant=60}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Constant=235}"/>
+        
+        <BoxView x:Name="FirstBoxView"
+                 CornerRadius="50"
+                 Color="RoyalBlue"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.52}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.2}"/>
+        
+        <BoxView x:Name="SecondeBoxView"
+                 CornerRadius="50"
+                 Color="Olive"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.48}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=FirstBoxView, Property=Width, Factor=1}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=FirstBoxView, Property=Height, Factor=1.5}"/>
+        <BoxView x:Name="ThirdBoxView"
+                 CornerRadius="50"
+                 Color="PeachPuff"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SecondeBoxView, Property=Width, Constant=210}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SecondeBoxView, Property=Y, Constant=-25}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.2}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.4}"/>
+
+        <Button Text="This is Relative Layout"
+                CornerRadius="20"
+                BackgroundColor="Orange"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=-330}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=-80}"
+                RelativeLayout.WidthConstraint="250"
+                RelativeLayout.HeightConstraint="70"/>
+        
+    </RelativeLayout>
 </ContentPage>

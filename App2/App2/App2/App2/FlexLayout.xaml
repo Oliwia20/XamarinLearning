@@ -4,9 +4,22 @@
              x:Class="App2.FlexLayout">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame  BackgroundColor="Black">
+                <Label Text="This is Flex Layout" TextColor="White" FontSize="Large" HorizontalOptions="CenterAndExpand" />
+            </Frame>
+            <FlexLayout Direction="Row">
+                <Button BackgroundColor="SeaGreen" Text="Item 1" HeightRequest="100" WidthRequest="90"/>
+                <Button BackgroundColor="LightBlue" Text="Item 2" HeightRequest="90" WidthRequest="100" />
+                <Button BackgroundColor="LightPink" Text="Item 3" HeightRequest="90" WidthRequest="100" />
+                <Button BackgroundColor="LightGreen" Text="Item 4" HeightRequest="100" WidthRequest="90"/>
+            </FlexLayout>
+            <FlexLayout Direction="Column">
+                <Button BackgroundColor="SeaGreen" Text="Item 1" />
+                <Button BackgroundColor="LightBlue" Text="Item 2" />
+                <Button BackgroundColor="LightPink" Text="Item 3" />
+                <Button BackgroundColor="LightGreen" Text="Item 4" />
+            </FlexLayout>
         </StackLayout>
+       
     </ContentPage.Content>
 </ContentPage>

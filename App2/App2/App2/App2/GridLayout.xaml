@@ -4,8 +4,8 @@
              x:Class="App2.GridLayout">
     <ContentPage.Content>
         <StackLayout>
-            <Frame>
-                <Label Text="This is Grid Layout" FontSize="Large" HorizontalOptions="CenterAndExpand" />
+            <Frame  BackgroundColor="Black">
+                <Label Text="This is Grid Layout" TextColor="White" FontSize="Large" HorizontalOptions="CenterAndExpand" />
             </Frame>
             <Grid BackgroundColor="Silver">
                 <Label Text="LABEL 1" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
