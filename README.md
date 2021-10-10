@@ -3,3 +3,6 @@ Repository containing individual "small" programs that were developed in the cou
 
 -- App1 --
 Simple application that generates quotes with the ability to increase the font size with a slider
+-- App2 --
+Application that shows variety of available layouts.
+-- App3 --
