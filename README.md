@@ -6,3 +6,4 @@ Simple application that generates quotes with the ability to increase the font s
 - App2  
 Application that shows variety of available layouts.
 - App3  
+Extra-simple instragram-lookalike but..for animals. 
